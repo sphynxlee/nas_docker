@@ -1,14 +1,8 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
 const app = express();
 const port = 3000;
 
-// Define your routes here
-interface RequestWithName {
-  name: string;
-  // Add other properties if needed
-}
-
-app.get('/', (req: RequestWithName, res) => {
+app.get('/', (req: Request, res: Response) => {
   res.send('Hello, World!');
 });
 
